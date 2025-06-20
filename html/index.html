@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/nav-component.js"></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -36,18 +37,7 @@
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Chcem Web</a></li>
-							<li><a href="generic.html">Chcem Appku</a></li>
-							<li><a href="generic.html">Chcem Dokumentáciu</a></li>
-							<li><a href="generic.html">Chcem Čistý kód</a></li>
-							<li><a href="generic.html">Chcem Výskum</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+				<nav-component></nav-component>
 
 				<!-- Main -->
 					<div id="main">
@@ -55,14 +45,14 @@
 							<header>
 								<h1>AI nás už nahradila.<br />
 								Software makes a software.</h1>
-								<p>Kratky popis o tom ako funguje AI tvorba na zaklade definovania poziadaviek v chate.</p>
+								<p>Vlastný softvér nebolo nikdy jednoduchšie vytvoriť. Jednoznačne popíš vlastné predstavy a AI vytvorí presne čo povieš. Nelám si hlavu či C, Rust, Java, GO! Programovací jazyk je ten tvoj.</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="index.html">
 										<h2>Web</h2>
 										<div class="content">
 											<p>Chcem webstranku bez starostí.</p>
@@ -73,10 +63,10 @@
 									<span class="image">
 										<img src="images/pic02.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="index.html">
 										<h2>Appka</h2>
 										<div class="content">
-											<p>Chcem aplikáciu priamo do mobilu alebo do prehliadača.</p>
+											<p>Chcem aplikáciu priamo do mobilu alebo prehliadača.</p>
 										</div>
 									</a>
 								</article>
@@ -84,10 +74,10 @@
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
-									<a href="generic.html">
-										<h2>Dokumentácia</h2>
+									<a href="index.html">
+										<h2>Service</h2>
 										<div class="content">
-											<p>Chcem návrh nového softvéru alebo doplniť dokumentáciu ku kódu.</p>
+											<p>Chcem service so spracovaním a poskytovaním údajov.</p>
 										</div>
 									</a>
 								</article>
@@ -95,10 +85,10 @@
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
-									<a href="generic.html">
-										<h2>Čistý kód</h2>
+									<a href="index.html">
+										<h2>Dokumentácia</h2>
 										<div class="content">
-											<p>Chcem mať čistý kód môjho softvéru a vyvýjať softvér sám.</p>
+											<p>Chcem návrh nového softvéru alebo doplniť dokumentáciu ku kódu.</p>
 										</div>
 									</a>
 								</article>
@@ -106,10 +96,21 @@
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="index.html">
+										<h2>Čistý kód</h2>
+										<div class="content">
+											<p>Chcem mať čistý kód môjho softvéru a vyvýjať sám.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<a href="index.html">
 										<h2>Výskum</h2>
 										<div class="content">
-											<p>Chcem výskum možností riešenia problému.</p>
+											<p>Chcem výskum digitalizácie v mojej oblasti mimo IT.</p>
 										</div>
 									</a>
 								</article>
@@ -122,20 +123,21 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form id="ajax-form">
 									<div class="fields">
 										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
+											<input required type="text" name="name" id="name" placeholder="Name *" />
 										</div>
 										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
+											<input required type="email" name="email" id="email" placeholder="Email *" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
+											<textarea required name="message" id="message" placeholder="Message *"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send" class="primary" /></li>
+										<li><div id="response" class="response"></div></li>
 									</ul>
 								</form>
 							</section>
@@ -146,14 +148,14 @@
 									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://github.com/tomotomek" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
 									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
 									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
 									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; TBordac. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP Phantom</a></li>
+								<li>&copy; TBordac. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP - Phantom</a></li>
 							</ul>
 						</div>
 					</footer>
@@ -164,6 +166,7 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/form-handler.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 

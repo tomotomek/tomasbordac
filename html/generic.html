@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/nav-component.js"></script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -36,16 +37,7 @@
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+				<nav-component></nav-component>
 
 				<!-- Main -->
 					<div id="main">
@@ -63,7 +55,7 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form id="ajax-form">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -105,6 +97,7 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/form-handler.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
