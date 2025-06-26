@@ -71,7 +71,7 @@ class FormHandler {
             this.responseDiv.className = 'response error';
             this.responseDiv.innerHTML = `<strong>Error:</strong> 
                                           Nebolo možné odoslať požiadavku.
-                                          Skúste neskôr alebo kontaktuje info centrum na <i>info@tbordac.com</i>`;
+                                          Skúste neskôr alebo kontaktuje info centrum na <i>tomas.bordac@gmail.com</i>`;
             this.hideResponseAfterDelay();
         }
     }

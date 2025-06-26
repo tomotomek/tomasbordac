@@ -7,7 +7,7 @@ class NavComponent extends HTMLElement {
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html">Web</a></li>
                     <li><a href="index.html">Appka</a></li>
-                    <li><a href="index.html">Service</a></li>
+                    <li><a href="index.html">Inteligentná domácnosť</a></li>
                     <li><a href="index.html">Dokumentácia</a></li>
                     <li><a href="index.html">Čistý kód</a></li>
                     <li><a href="index.html">Výskum</a></li>
