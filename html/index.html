@@ -7,13 +7,14 @@
 <html lang="svk">
 	<head>
 		<title>TBordac</title>
-        <link rel="icon" type="image/x-icon" href="/images/logoTB.ico">
+        <link rel="icon" type="image/x-icon" href="images/logoTB.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script src="assets/nav-component.js"></script>
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="assets/reviews-component.js"></script>
     </head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -26,7 +27,9 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logoTB.svg" alt="Tomas Bordac" /></span><span class="title">TBordac</span>
+									<span class="title">Tomas</span>
+                                    <span class="symbol"><img src="images/logoTB.svg" alt="Tomas Bordac" /></span>
+                                    <span class="title">Bordac</span>
 								</a>
 
 							<!-- Nav -->
@@ -49,31 +52,13 @@
 								<h1>Brána do digitálneho sveta.<br />
 								Nechaj preniknúť myšlienky do skutočného sveta IT.</h1>
 								<p>Vlastný softvér nebolo nikdy jednoduchšie vytvoriť. Jednoznačne popíš vlastné predstavy a AI vytvorí presne čo povieš. Nelám si hlavu či C, Rust, Java, GO! Programovací jazyk je ten tvoj.</p>
-                                <p><strong>Rezervuj si termin konzultacie</strong></p>
-                                <!-- Google Calendar Appointment Scheduling begin -->
-                                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                                <script>
-                                    (function() {
-                                        var target = document.currentScript;
-                                        window.addEventListener('load', function() {
-                                            calendar.schedulingButton.load({
-                                                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0MKUyz9D57tnpN6VqL9rGLfAyzZqey-tXK_veqn0EfuRjiHmufeSuo6yR6DiYiwKwK5xeifF0A?gv=true',
-                                                color: '#039BE5',
-                                                label: 'Rezervovať schôdzku',
-                                                target,
-                                            });
-                                        });
-                                    })();
-                                </script>
-                                <!-- end Google Calendar Appointment Scheduling -->
                             </header>
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Web</h2>
 										<div class="content">
 											<p>Chcem webstranku bez starostí.</p>
@@ -84,7 +69,7 @@
 									<span class="image">
 										<img src="images/pic02.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Appka</h2>
 										<div class="content">
 											<p>Chcem aplikáciu priamo do mobilu alebo prehliadača.</p>
@@ -95,7 +80,7 @@
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Inteligentná domácnosť</h2>
 										<div class="content">
 											<p>Chcem digitánleho spoločníka ktorý zvýší bezpečnosť mojej domácnosti.</p>
@@ -106,7 +91,7 @@
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Dokumentácia</h2>
 										<div class="content">
 											<p>Chcem návrh nového softvéru alebo doplniť dokumentáciu ku kódu.</p>
@@ -117,7 +102,7 @@
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Čistý kód</h2>
 										<div class="content">
 											<p>Chcem mať čistý kód môjho softvéru a vyvýjať sám.</p>
@@ -128,7 +113,7 @@
 									<span class="image">
 										<img src="images/pic06.jpg" alt="" />
 									</span>
-									<a href="index.html">
+									<a href="index.html" @click.prevent="">
 										<h2>Výskum</h2>
 										<div class="content">
 											<p>Chcem výskum digitalizácie v mojej oblasti mimo IT.</p>
@@ -136,6 +121,9 @@
 									</a>
 								</article>
 							</section>
+
+<!--                            <reviews-component></reviews-component>-->
+
 						</div>
 					</div>
 
@@ -159,6 +147,25 @@
 									<ul class="actions">
 										<li><input type="submit" value="Send" class="primary" /></li>
 										<li><div id="response" class="response"></div></li>
+                                        <li>
+                                            <!-- Google Calendar Appointment Scheduling begin -->
+                                            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                                            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                                            <script>
+                                                (function() {
+                                                    var target = document.currentScript;
+                                                    window.addEventListener('load', function() {
+                                                        calendar.schedulingButton.load({
+                                                            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0MKUyz9D57tnpN6VqL9rGLfAyzZqey-tXK_veqn0EfuRjiHmufeSuo6yR6DiYiwKwK5xeifF0A?gv=true',
+                                                            color: '#e8d4ac',
+                                                            label: 'Rezervovať schôdzku',
+                                                            target,
+                                                        });
+                                                    });
+                                                })();
+                                            </script>
+                                            <!-- end Google Calendar Appointment Scheduling -->
+                                        </li>
 									</ul>
 								</form>
 							</section>
@@ -191,23 +198,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <!--        Vue-->
-		<script>
-			const Dudes = {
-				data() {
-					return {
-						dude: 'Tomas Bordac',
-                        name: 'TBordac',
-						characterData: ["first", "second"]
-					}
-				},
-				methods: {
-                    handleNewEvent(event) {
-                        console.log('LiveChatWidget.onNewEvent', event)
-                    }
-				}
-			}
-
-			Vue.createApp(Dudes).mount('#app');
-		</script>
+			<script src="assets/js/vue.js"></script>
 	</body>
 </html>
