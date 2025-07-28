@@ -1,7 +1,11 @@
 const Dudes = {
     data() {
         return {
-            dude: {},
+            dude: {
+                name: '',
+                message: '',
+                rating: 0
+            },
             customerReviews: [ {
                 name: 'Tomas Bordac',
                 message: 'Bol som s tvorbou sofwtare nadmieru spokojny. Dodanie bolo velmi rychle.',
