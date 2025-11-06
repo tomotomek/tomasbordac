@@ -1,0 +1,93 @@
+.hero {
+    scroll-behavior: smooth;
+}
+
+.hero ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    cursor: default;
+
+    list-style: none;
+    padding: 0 1em 1em 0;
+}
+
+.hero ul::-webkit-scrollbar {
+    display: none;
+}
+.hero ul::-webkit-scrollbar-track {
+    background: #e8d4ac;
+    border-radius: 999px;
+}
+.hero ul::-webkit-scrollbar-thumb {
+    background: #F27979;
+    border-radius: 999px;
+}
+
+.hero li {
+    padding: 1em;
+    min-width: 14em;
+
+    text-align: left;
+    border-radius: 0.5em;
+    /* background: #e8d4ac; */
+    background: rgba(232, 212, 173, 0.5);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    transition: all 0.2s;
+    scroll-snap-align: start;
+}
+
+.hero li:hover {
+    font-weight: bold;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.hero-image  {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-size: x-small;
+    text-align: center;
+    z-index: -1;
+}
+
+.hero-image img {
+    width: 150px;
+    aspect-ratio: auto;
+    margin: auto;
+}
+
+.hero p {
+    margin: 1em 0 0 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .hero li {
+        min-width: 12em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .hero ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 736px) {       
+    .hero ul {
+        grid-template-columns: 100% 100% 100% 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+}
