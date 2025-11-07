@@ -1,0 +1,25 @@
+.challenge {
+    margin: 0;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+.challenge h2 {
+    grid-area: 1 / 1 / auto / span 2;
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 736px) {       
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
